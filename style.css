@@ -254,3 +254,71 @@ ul.pts ul.pts li::before {
 }
 .toc.side { margin: 0; padding: 0; border: 0; }
 .tldr { margin-top: 2rem; }
+
+/* privacy orgs: grayscale logo strip */
+.orgs {
+  grid-column: 1 / -1;
+  margin-top: 2rem;
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+.orgs-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.orgs-head h3 {
+  margin: 0;
+  font: 600 0.75rem/1 var(--mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.donate { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.donate a {
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  font: 600 0.78rem/1 var(--mono);
+  text-decoration: none;
+}
+.donate a:hover { background: var(--accent); color: var(--bg); }
+.marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+.track {
+  display: flex;
+  width: max-content;
+  animation: orgs-scroll 40s linear infinite;
+}
+.marquee:hover .track { animation-play-state: paused; }
+.set { display: flex; align-items: center; gap: 4rem; padding-right: 4rem; }
+@keyframes orgs-scroll { to { transform: translateX(-50%); } }
+.logo {
+  color: var(--muted);
+  opacity: 0.7;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  line-height: 1;
+  filter: grayscale(1);
+  transition: opacity 0.2s, color 0.2s;
+}
+.logo:hover { opacity: 1; color: var(--fg); }
+.l-eff { font-weight: 900; letter-spacing: 0.04em; }
+.l-badger { font-weight: 700; font-style: italic; }
+.l-le { font-weight: 300; letter-spacing: -0.02em; }
+.l-proton { font-weight: 800; letter-spacing: -0.03em; }
+.l-signal { font-weight: 600; }
+.l-crypt { font: 500 1.4rem/1 var(--mono); }
+.l-ddg { font-weight: 700; letter-spacing: -0.02em; }
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; width: auto; }
+  .set { flex-wrap: wrap; gap: 1.5rem 3rem; }
+  .set[aria-hidden="true"] { display: none; }
+}
