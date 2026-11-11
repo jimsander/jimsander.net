@@ -206,3 +206,37 @@ footer {
   color: var(--muted);
   font: 0.78rem/1.4 var(--mono);
 }
+
+/* table of contents */
+html { scroll-behavior: smooth; }
+h2[id], aside[id] { scroll-margin-top: 1.5rem; }
+.toc {
+  margin: 2rem 0 0;
+  padding: 1.1rem 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+}
+.toc h3 {
+  margin: 0 0 0.6rem;
+  font: 600 0.75rem/1 var(--mono);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+  font: 0.9rem/1.5 var(--mono);
+}
+.toc li { counter-increment: toc; padding: 0.15rem 0; }
+.toc li::before {
+  content: counter(toc, decimal-leading-zero) "  ";
+  color: var(--accent);
+  white-space: pre;
+}
+.toc a { color: var(--fg); text-decoration: none; }
+.toc a:hover { color: var(--accent); }
+.toc.inline { border: 0; padding: 0; }
+.toc.inline ol { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
