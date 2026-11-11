@@ -240,3 +240,15 @@ h2[id], aside[id] { scroll-margin-top: 1.5rem; }
 .toc a:hover { color: var(--accent); }
 .toc.inline { border: 0; padding: 0; }
 .toc.inline ol { display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+
+/* nested bullets */
+ul.pts ul.pts { margin: 0.35rem 0 0.1rem; }
+ul.pts ul.pts li { padding-top: 0.2rem; padding-bottom: 0.2rem; color: var(--fg); opacity: 0.88; }
+ul.pts ul.pts li::before {
+  width: 0.4rem;
+  height: 0.4rem;
+  top: 0.8em;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  background: transparent;
+}
