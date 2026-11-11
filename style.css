@@ -252,3 +252,5 @@ ul.pts ul.pts li::before {
   border-radius: 50%;
   background: transparent;
 }
+.toc.side { margin: 0; padding: 0; border: 0; }
+.tldr { margin-top: 2rem; }
