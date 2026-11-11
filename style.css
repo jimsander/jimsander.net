@@ -182,7 +182,7 @@ aside .more {
 }
 
 figure { margin: 2rem 0 0; }
-figure img[src*="inbox"] { max-width: 420px; width: 100%; }
+figure img[src*="inbox"] { max-width: 544px; width: 100%; }
 figure img[src*="verify-email"] { max-width: 460px; width: 100%; }
 figure img {
   display: block;
