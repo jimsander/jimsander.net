@@ -322,3 +322,33 @@ ul.pts ul.pts li::before {
   .set { flex-wrap: wrap; gap: 1.5rem 3rem; }
   .set[aria-hidden="true"] { display: none; }
 }
+
+/* quip under tagline */
+.quip {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font: italic 0.9rem/1.4 var(--sans);
+  opacity: 0.85;
+}
+
+/* popcorn */
+.hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 1.5rem; }
+.hero-vid {
+  width: clamp(110px, 18vw, 180px);
+  aspect-ratio: 1;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  object-fit: cover;
+  transform: rotate(3deg);
+  box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.7);
+}
+aside .thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 50% 60%;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+}
